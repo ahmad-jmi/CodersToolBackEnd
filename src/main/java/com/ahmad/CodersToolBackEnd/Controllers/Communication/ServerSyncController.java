@@ -11,18 +11,18 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/server")
 public class ServerSyncController {
     @GetMapping
-    public ResponseEntity<String> getServerInformation(){
+    public ResponseEntity<String> getServerInformation() {
         return ResponseEntity.ok("Server is up and running");
     }
 
     @PostMapping("/handshake")
-    public ResponseEntity<HandshakeResponse> checkForHandshake(@RequestBody HandshakeRequestPayLoad request){
+    public ResponseEntity<HandshakeResponse> checkForHandshake(@RequestBody HandshakeRequestPayLoad request) {
         HandshakeResponse response = new HandshakeResponse(true, "Handshake is accepted");
         return ResponseEntity.ok(response);
     }
 
     @GetMapping("/heatBeat")
-    public ResponseEntity<HeartBeatResponse> checkHeartBeat(@RequestBody HeartBeatRequestPayLoad request){
+    public ResponseEntity<HeartBeatResponse> checkHeartBeat(@RequestBody HeartBeatRequestPayLoad request) {
         HeartBeatResponse response = new HeartBeatResponse("alive");
         return ResponseEntity.ok(response);
     }
