@@ -1,4 +1,4 @@
-package com.ahmad.CodersToolBackEnd.main;
+package com.ahmad.CodersToolBackEnd;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
